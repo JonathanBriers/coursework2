@@ -1,0 +1,8 @@
+<% provide(:title, "Cheam Croquet & Bowls Club | Newsletters") %>
+<% provide(:heading, "Newsletters") %>
+<article id = "newsletters">
+  <% @newsletters.each do |newsletter| %>
+  <b><%= newsletter.name %> </b> <br />
+  <%= link_to "Download", newsletter.pdf_url %> <br />
+  <% end %>
+</article>

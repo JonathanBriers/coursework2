@@ -10,7 +10,7 @@ Coursework::Application.routes.draw do
   match '/directions', to: 'static_pages#directions', via: 'get'
   match '/links', to: 'static_pages#links', via: 'get'
   match '/programme', to: 'core#events', via: 'get'
-  match '/newsletters', to: 'static_pages#newsletters', via: 'get'
+  match '/newsletters', to: 'core#newsletters', via: 'get'
   match '/documents', to: 'assets#documents', via: 'get'
   match '/events', to: 'core#events', via: 'get'
   get "static_pages/home"
