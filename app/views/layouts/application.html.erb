@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= yield(:title)%></title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <%=render 'layouts/header'%>
+  <div class = container>
+    <div class="left hero-unit">
+      <div id = "scrolldiv" style = "height : 550px">
+        <h2>
+        <%=image_tag("original_logo.png")%> 
+        <%= yield(:heading)%>
+        </h2>
+        <hr />
+    <%= yield %>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
