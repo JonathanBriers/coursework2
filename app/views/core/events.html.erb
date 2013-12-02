@@ -1,0 +1,11 @@
+<% provide(:title, " Cheam Croquet & Bowls Club | " + Time.now.strftime("%Y") +  " Programme") %>
+<% provide(:heading, Time.now.strftime("%Y") + " Programme") %>
+<article id = "events">
+  <% @events.each do |event| %>
+    <% if event.date > Time.now then %>
+    <b><%= event.name %> </b> <br />
+    <p><%= event.description %> </p>
+    <p><%= event.date %> </p>
+    <% end %>
+  <% end %>
+</article>

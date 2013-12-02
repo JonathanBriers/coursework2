@@ -12,6 +12,7 @@ Coursework::Application.routes.draw do
   match '/programme', to: 'static_pages#programme', via: 'get'
   match '/newsletters', to: 'static_pages#newsletters', via: 'get'
   match '/documents', to: 'assets#documents', via: 'get'
+  match '/events', to: 'core#events', via: 'get'
   get "static_pages/home"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
