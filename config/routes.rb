@@ -1,5 +1,6 @@
 Coursework::Application.routes.draw do
   
+  get "active/book"
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   root 'static_pages#home'
@@ -13,6 +14,7 @@ Coursework::Application.routes.draw do
   match '/newsletters', to: 'core#newsletters', via: 'get'
   match '/documents', to: 'assets#documents', via: 'get'
   match '/events', to: 'core#events', via: 'get'
+  match '/book', to: 'core#book', via: 'get'
   get "static_pages/home"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

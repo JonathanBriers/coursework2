@@ -2,7 +2,7 @@
 <% provide(:heading, "Newsletters") %>
 <article id = "newsletters">
   <% @newsletters.each do |newsletter| %>
-  <b><%= newsletter.name %> </b> <br />
-  <%= link_to "Download", newsletter.pdf_url %> <br />
+  <b><%= newsletter.name %> </b>
+  <p><%= link_to "Download", newsletter.pdf_url %> </p>
   <% end %>
 </article>
