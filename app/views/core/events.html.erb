@@ -3,9 +3,9 @@
 <article id = "events">
   <% @events.each do |event| %>
     <% if event.date > Time.now then %>
-    <b><%= event.name %> </b> <br />
-    <p><%= event.description %> </p>
-    <p><%= event.date %> </p>
+      <b><%= event.name %> </b> <br />
+      <p><%= event.description %> </p>
+      <p><%= event.date %> </p><br />
     <% end %>
   <% end %>
 </article>

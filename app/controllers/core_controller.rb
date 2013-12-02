@@ -1,5 +1,5 @@
 class CoreController < ApplicationController
   def events
-    @events = Event.all
+    @events = Event.all(:order => 'date ASC')
   end
 end
