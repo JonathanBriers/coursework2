@@ -1,5 +1,7 @@
 Coursework::Application.routes.draw do
   
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   root 'static_pages#home'
   match '/join', to: 'static_pages#join', via: 'get'
   match '/about', to: 'static_pages#about', via: 'get'
